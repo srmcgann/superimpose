@@ -36,17 +36,6 @@
   </head>
   <body>
     <canvas id="c" width="1920" height="1079" style="width: 100vw; height: 480.375px;">    <script>
-      let sendData = {demoID: 600332}
-      let url = 'https://code.dweet.net/incrementViews.php'
-      fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(sendData),
-      })
-    </script>
-    <script>
 		c=document.querySelector('#c')
     x=c.getContext('2d')
     S=Math.sin
@@ -109,7 +98,7 @@
           bctx.putImageData(data,0,0)
           go=true
         }
-        s=(k=window.location.href.split('superimpose.dweet.net/'))[k.length-1]
+        s=(k=window.location.href.split('superimpose.dweet.net/test/'))[k.length-1]
         if(s.length)jpg.src='/proxy.php?url='+s
 
         for(a=[1,1],i=40;i--;)a=[...a,a[l=a.length-1]+a[l-1]]
